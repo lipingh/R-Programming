@@ -1,7 +1,7 @@
 corr <- function(directory, threshold = 0) {
   # Use complete function in part 2 to calulate number of complete cases
   df <- complete(directory)
-  filtered_df <- subset(df, df$no > threshold)
+  filtered_df <- subset(df, df$nobs > threshold)
   correlation <- c()
   for (i in filtered_df$id) {
     file_path <- paste(getwd(), "/", directory, "/", sprintf("%03d", i), ".csv", sep = "")

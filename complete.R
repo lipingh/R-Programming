@@ -7,5 +7,5 @@ complete <- function (directory, id = 1: 332) {
     file_name <- c(file_name, i)
     number_cases <- c(number_cases, sum(complete.cases(data)))
   }
-  data.frame(id = file_name, no = number_cases)
+  data.frame(id = file_name, nobs = number_cases)
 }
